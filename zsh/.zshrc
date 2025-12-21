@@ -23,7 +23,7 @@ zsh_add_plugin zsh-users/zsh-syntax-highlighting # Must be last plugin
 ######################################################################
 zstyle ':completion:*' menu select
 zstyle ':completion:*' special-dirs true # show . and .. in cmp menu
-zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS} ma=0\;37
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS} ma=0\;32
 
 ######################################################################
 # Main opts
