@@ -1,0 +1,31 @@
+#!/bin/sh
+
+function zsh_add_file() {
+    FILE="$ZSH_DIR/$1"
+    
+    [ -f $FILE ] && source $FILE
+}
+
+function zsh_add_plugin() {
+    PLUGIN_NAME=$(echo $1 | cut -d "/" -f 2)
+
+    if [ -d "$ZSH_DIR/plugins/$PLUGIN_NAME" ]; then 
+        PLUGIN_FILE="plugins/$PLUGIN_NAME/$PLUGIN_NAME"
+    
+        zsh_add_file "$PLUGIN_FILE.plugin.zsh" || 
+        zsh_add_file "$PLUGIN_FILE.zsh" ||
+        zsh_add_file "$PLUGIN_FILE.zsh-theme"
+    else
+        git clone --depth=1 "https://github.com/$1.git" "$ZSH_DIR/plugins/$PLUGIN_NAME"
+    fi
+}
+
+function zsh_apply_colors() {
+    PLUGIN_NAME=$(echo $1 | cut -d "/" -f 2)
+
+    if [ -d "$ZSH_DIR/plugins/$PLUGIN_NAME" ]; then 
+        eval "$(dircolors $ZSH_DIR/plugins/$PLUGIN_NAME/src/dir_colors)"
+    else
+        git clone --depth=1 "https://github.com/$1.git" "$ZSH_DIR/plugins/$PLUGIN_NAME"
+    fi
+}
