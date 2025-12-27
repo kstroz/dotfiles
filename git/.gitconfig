@@ -1,0 +1,9 @@
+[user]
+	name = Kamil Stróż
+	email = kstroz24@gmail.com
+[core]
+	editor = nvim
+[color]
+	ui = true
+[init]
+	defaultBranch = main
