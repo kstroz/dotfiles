@@ -33,7 +33,6 @@ setopt auto_menu menu_complete
 setopt autocd
 setopt auto_param_slash
 setopt no_case_glob no_case_match
-setopt globdots
 setopt interactive_comments
 stty stop undef # disable accidental ctrl s
 unsetopt BEEP  # disable visual bell

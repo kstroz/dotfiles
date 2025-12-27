@@ -1,0 +1,31 @@
+# Docs: https://ghostty.org/docs/config.
+
+# Reload by pressing:
+# ctrl+shift+, (Linux) 
+# cmd+shift+, (macOS)
+theme = Nord
+
+# Fonts
+font-family = MesloLGS NF
+font-size = 14
+font-thicken = false
+
+# Window
+window-padding-x = 8
+window-padding-y = 8
+window-decoration = none
+
+# Cursor
+cursor-style = block
+cursor-style-blink = false
+cursor-invert-fg-bg = true
+mouse-hide-while-typing = true
+right-click-action = copy-or-paste
+
+## Clipboard
+clipboard-write = allow
+clipboard-read = ask
+
+## Shell integration
+shell-integration = zsh
+shell-integration-features = no-cursor
