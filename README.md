@@ -20,13 +20,19 @@ After cloning, navigate to the directory.
 cd dotfiles/
 ```
 
-Run Stow to symlink the dotfiles.
+Run Stow to symlink all dotfiles.
 
 ```bash
 stow */
 ```
 
-Restart shell.
+Or just some of them.
+
+```bash
+stow zsh
+```
+
+**Optional** Restart shell.
 
 ```bash
 exec zsh
