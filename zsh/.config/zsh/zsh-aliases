@@ -1,4 +1,14 @@
 #!/bin/sh
 
-alias confzsh="$EDITOR $HOME/.zshrc"
-alias confgit="$EDITOR $HOME/.gitconfig"
+alias ls='ls --color=auto'
+alias df='df -h' 
+
+# zsh configs
+alias conf-zsh="$EDITOR $HOME/.zshrc"
+alias conf-zprofile="$EDITOR $HOME/.zprofile"
+alias conf-zsh-aliases="$EDITOR $XDG_CONFIG_HOME/zsh/zsh-aliases"
+alias conf-zsh-exports="$EDITOR $XDG_CONFIG_HOME/zsh/zsh-exports"
+
+alias conf-git="$EDITOR $HOME/.gitconfig"
+alias conf-tmux="$EDITOR $HOME/.tmux.conf"
+alias conf-ghostty="$EDITOR $XDG_CONFIG_HOME/ghostty/config"
