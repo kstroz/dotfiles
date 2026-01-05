@@ -3,7 +3,7 @@
 # Reload by pressing:
 # ctrl+shift+, (Linux) 
 # cmd+shift+, (macOS)
-theme = Nord
+theme = Gruvbox Dark
 
 # Fonts
 font-family = MesloLGS NF

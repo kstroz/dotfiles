@@ -19,13 +19,3 @@ function zsh_add_plugin() {
         git clone --depth=1 "https://github.com/$1.git" "$ZSH_DIR/plugins/$PLUGIN_NAME"
     fi
 }
-
-function zsh_apply_colors() {
-    PLUGIN_NAME=$(echo $1 | cut -d "/" -f 2)
-
-    if [ -d "$ZSH_DIR/plugins/$PLUGIN_NAME" ]; then 
-        eval "$(dircolors $ZSH_DIR/plugins/$PLUGIN_NAME/src/dir_colors)"
-    else
-        git clone --depth=1 "https://github.com/$1.git" "$ZSH_DIR/plugins/$PLUGIN_NAME"
-    fi
-}

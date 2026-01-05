@@ -7,7 +7,6 @@ source "$ZSH_DIR/zsh-functions"
 # Plugins
 zsh_add_plugin romkatv/powerlevel10k
 zsh_add_file .p10k.zsh
-zsh_apply_colors nordtheme/dircolors
 
 zsh_add_plugin zsh-users/zsh-autosuggestions
 zsh_add_plugin zsh-users/zsh-syntax-highlighting # Must be last plugin
@@ -15,7 +14,7 @@ zsh_add_plugin zsh-users/zsh-syntax-highlighting # Must be last plugin
 # Completion
 zstyle ':completion:*' menu select
 zstyle ':completion:*' special-dirs true # show . and .. in cmp menu
-zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS} ma=0\;32
+zstyle ':completion:*' list-colors 'ma=38;5;3' 'di=38;5;4' # to better match gruvbox
 
 # Main opts
 setopt append_history inc_append_history share_history
