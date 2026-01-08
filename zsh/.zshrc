@@ -27,7 +27,7 @@ stty stop undef # disable accidental ctrl s
 unsetopt BEEP  # disable visual bell
 
 # History
-HISTFILE="$HOME/.zsh_history"
+HISTFILE="$XDG_CACHE_HOME/.zsh_history"
 HISTSIZE=1000000
 SAVEHIST=1000000
 HISTCONTROL=ignoreboth
