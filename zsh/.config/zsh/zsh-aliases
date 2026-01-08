@@ -10,5 +10,5 @@ alias conf-zsh-aliases="$EDITOR $XDG_CONFIG_HOME/zsh/zsh-aliases"
 alias conf-zsh-exports="$EDITOR $XDG_CONFIG_HOME/zsh/zsh-exports"
 
 alias conf-git="$EDITOR $HOME/.gitconfig"
-alias conf-tmux="$EDITOR $HOME/.tmux.conf"
+alias conf-tmux="$EDITOR $XDG_CONFIG_HOME/tmux/tmux.conf"
 alias conf-ghostty="$EDITOR $XDG_CONFIG_HOME/ghostty/config"
