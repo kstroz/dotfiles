@@ -1,7 +1,8 @@
 #!/bin/sh
 
-alias ls='ls --color=auto'
-alias df='df -h' 
+alias ls="ls --color=auto"
+alias df="df -h"
+alias lg="lazygit"
 
 # zsh configs
 alias conf-zsh="$EDITOR $HOME/.zshrc"
