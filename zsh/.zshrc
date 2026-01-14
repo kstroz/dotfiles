@@ -6,6 +6,10 @@ source "$ZSH_DIR/zsh-aliases"
 source "$ZSH_DIR/zsh-exports"
 source "$ZSH_DIR/zsh-functions"
 
+zmodload zsh/complist
+autoload -U compinit && compinit
+autoload -U colors && colors
+
 # Completion
 zstyle ':completion:*' menu select
 zstyle ':completion:*' special-dirs true # show . and .. in cmp menu
