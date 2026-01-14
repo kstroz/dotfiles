@@ -1,15 +1,10 @@
 #!/bin/sh
 
-# Load functions
-export ZSH_DIR="$HOME/.config/zsh"
+export ZSH_DIR="$XDG_CONFIG_HOME/zsh"
+
+source "$ZSH_DIR/zsh-aliases"
+source "$ZSH_DIR/zsh-exports"
 source "$ZSH_DIR/zsh-functions"
-
-# Plugins
-zsh_add_plugin romkatv/powerlevel10k
-zsh_add_file .p10k.zsh
-
-zsh_add_plugin zsh-users/zsh-autosuggestions
-zsh_add_plugin zsh-users/zsh-syntax-highlighting # Must be last plugin
 
 # Completion
 zstyle ':completion:*' menu select
@@ -32,6 +27,10 @@ HISTSIZE=1000000
 SAVEHIST=1000000
 HISTCONTROL=ignoreboth
 
-# Additional files
-zsh_add_file zsh-exports
-zsh_add_file zsh-aliases
+# Plugins
+zsh_add_plugin romkatv/powerlevel10k
+source "$ZSH_DIR/.p10k.zsh"
+
+zsh_add_plugin lukechilds/zsh-nvm
+zsh_add_plugin zsh-users/zsh-autosuggestions
+zsh_add_plugin zsh-users/zsh-syntax-highlighting # Must be last plugin

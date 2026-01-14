@@ -2,13 +2,13 @@
 
 export PATH="$PATH:/home/kstroz/.local/bin"
 
-# NVM
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                      # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"    # This loads nvm bash_completion
+# nvm
+export NVM_DIR="$XDG_DATA_HOME/nvm"
+export NVM_LAZY_LOAD=true
+export NVM_AUTO_USE=true
 
 # pnpm
-export PNPM_HOME="$HOME/.local/share/pnpm"
+export PNPM_HOME="$XDG_DATA_HOME/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;

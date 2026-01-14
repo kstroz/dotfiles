@@ -1,21 +1,19 @@
 #!/bin/sh
 
-function zsh_add_file() {
-    FILE="$ZSH_DIR/$1"
-    
-    [ -f $FILE ] && source $FILE
-}
-
 function zsh_add_plugin() {
-    PLUGIN_NAME=$(echo $1 | cut -d "/" -f 2)
+  local REPO="$1"
+  local PLUGIN="$(basename "$REPO")"
+  local PLUGIN_DIR="$ZSH_DIR/plugins/$PLUGIN"
 
-    if [ -d "$ZSH_DIR/plugins/$PLUGIN_NAME" ]; then 
-        PLUGIN_FILE="plugins/$PLUGIN_NAME/$PLUGIN_NAME"
-    
-        zsh_add_file "$PLUGIN_FILE.plugin.zsh" || 
-        zsh_add_file "$PLUGIN_FILE.zsh" ||
-        zsh_add_file "$PLUGIN_FILE.zsh-theme"
-    else
-        git clone --depth=1 "https://github.com/$1.git" "$ZSH_DIR/plugins/$PLUGIN_NAME"
-    fi
+  if [[ ! -d "$PLUGIN_DIR" ]]; then
+    git clone --depth=1 "https://github.com/$REPO.git" "$PLUGIN_DIR"
+  fi
+
+  for FILE in \
+    "$PLUGIN_DIR/$PLUGIN.plugin.zsh" \
+    "$PLUGIN_DIR/$PLUGIN.zsh" \
+    "$PLUGIN_DIR/$PLUGIN.zsh-theme"
+  do
+    [[ -f "$FILE" ]] && source "$FILE" && return
+  done
 }
