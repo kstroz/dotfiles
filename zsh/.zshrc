@@ -35,6 +35,5 @@ HISTCONTROL=ignoreboth
 zsh_add_plugin romkatv/powerlevel10k
 source "$ZSH_DIR/.p10k.zsh"
 
-zsh_add_plugin lukechilds/zsh-nvm
 zsh_add_plugin zsh-users/zsh-autosuggestions
 zsh_add_plugin zsh-users/zsh-syntax-highlighting # Must be last plugin
