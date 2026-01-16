@@ -2,6 +2,14 @@
 
 export PATH="$PATH:/home/kstroz/.local/bin"
 
+case "$(uname -s)" in
+  Linux)
+    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+  ;;
+  Darwin)
+  ;;
+esac
+
 # fnm
 eval "$(fnm env --use-on-cd)"
 

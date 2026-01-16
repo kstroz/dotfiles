@@ -1,10 +1,6 @@
 #!/bin/sh
 
-export ZSH_DIR="$XDG_CONFIG_HOME/zsh"
-
-source "$ZSH_DIR/zsh-aliases"
-source "$ZSH_DIR/zsh-exports"
-source "$ZSH_DIR/zsh-functions"
+# zmodload zsh/zprof
 
 zmodload zsh/complist
 autoload -U compinit && compinit
@@ -31,9 +27,15 @@ HISTSIZE=1000000
 SAVEHIST=1000000
 HISTCONTROL=ignoreboth
 
+source "$XDG_CONFIG_HOME/zsh/zsh-aliases"
+source "$XDG_CONFIG_HOME/zsh/zsh-exports"
+source "$XDG_CONFIG_HOME/zsh/zsh-functions"
+
 # Plugins
 zsh_add_plugin romkatv/powerlevel10k
-source "$ZSH_DIR/.p10k.zsh"
+source "$XDG_CONFIG_HOME/zsh/.p10k.zsh"
 
 zsh_add_plugin zsh-users/zsh-autosuggestions
 zsh_add_plugin zsh-users/zsh-syntax-highlighting # Must be last plugin
+
+# zprof

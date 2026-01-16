@@ -3,7 +3,7 @@
 function zsh_add_plugin() {
   local REPO="$1"
   local PLUGIN="$(basename "$REPO")"
-  local PLUGIN_DIR="$ZSH_DIR/plugins/$PLUGIN"
+  local PLUGIN_DIR="$XDG_CONFIG_HOME/zsh/plugins/$PLUGIN"
 
   if [[ ! -d "$PLUGIN_DIR" ]]; then
     git clone --depth=1 "https://github.com/$REPO.git" "$PLUGIN_DIR"
