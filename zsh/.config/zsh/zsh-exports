@@ -10,6 +10,18 @@ case "$(uname -s)" in
   ;;
 esac
 
+export HOMEBREW_NO_ANALYTICS=1
+export HOMEBREW_NO_ENV_HINTS=1
+
+export MANPAGER="nvim +Man!"
+
+# bat
+export BAT_THEME="gruvbox-dark"
+
+# fzf
+source <(fzf --zsh)
+export FZF_DEFAULT_OPTS="--style minimal --layout=reverse --border=bold --margin=4% --preview='bat --color=always {}'"
+
 # fnm
 eval "$(fnm env --use-on-cd)"
 
