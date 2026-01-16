@@ -6,6 +6,6 @@ alias grep="grep --color=auto"
 alias df="df -h"
 
 alias v="nvim"
-alias vf='nvim $(fzf -m)'
+alias vo='fzf | { read -r f && nvim "$f"; }'
 alias lg="lazygit"
 
