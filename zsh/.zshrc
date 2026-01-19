@@ -35,6 +35,7 @@ source "$XDG_CONFIG_HOME/zsh/zsh-functions"
 zsh_add_plugin romkatv/powerlevel10k
 source "$XDG_CONFIG_HOME/zsh/.p10k.zsh"
 
+zsh_add_plugin jeffreytse/zsh-vi-mode
 zsh_add_plugin zsh-users/zsh-autosuggestions
 zsh_add_plugin zsh-users/zsh-syntax-highlighting # Must be last plugin
 

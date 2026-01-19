@@ -8,4 +8,4 @@ export XDG_DATA_HOME="$HOME/.local/share"
 # System defaults
 export EDITOR="nvim"
 export BROWSER="brave"
-export TERM="ghostty"
+export TERMINAL="ghostty"
