@@ -22,7 +22,24 @@ export BAT_THEME="gruvbox-dark"
 
 # fzf
 source <(fzf --zsh)
-export FZF_DEFAULT_OPTS="--style minimal --layout=reverse --border=bold --margin=4% --preview='bat --color=always {}'"
+export FZF_DEFAULT_OPTS="\
+  --style minimal \
+  --layout=reverse \
+  --border=bold \
+  --margin=4% \
+  --color=border:#a89984 \
+  --color=fg:#ebdbb2 \
+  --color=fg+:#ebdbb2 \
+  --color=bg+:#32302f \
+  --color=info:#928374 \
+  --color=hl:#fe8019 \
+  --color=hl+:#fe8019 \
+  --color=pointer:#fb4934 \
+  --color=marker:#d3869b \
+  --color=gutter:#a89984 \
+  --color=prompt:#b8bb26 \
+  --preview='bat --color=always {}'\
+"
 
 # fnm
 eval "$(fnm env --use-on-cd)"
