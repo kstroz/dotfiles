@@ -27,8 +27,8 @@ HISTSIZE=1000000
 SAVEHIST=1000000
 HISTCONTROL=ignoreboth
 
-source "$XDG_CONFIG_HOME/zsh/zsh-aliases"
 source "$XDG_CONFIG_HOME/zsh/zsh-exports"
+source "$XDG_CONFIG_HOME/zsh/zsh-aliases"
 source "$XDG_CONFIG_HOME/zsh/zsh-functions"
 
 # Plugins

@@ -1,11 +1,13 @@
 #!/bin/sh
 
 alias ls="ls --color=auto --group-directories-first"
-alias ll="ls -alF"
+alias ll="ls -alFh"
 alias grep="grep --color=auto"
 alias df="df -h"
 
 alias v="nvim"
 alias vo='fzf | { read -r f && nvim "$f"; }'
 alias lg="lazygit"
+alias ld="lazydocker"
 
+alias voc='fd -HIL "" --exclude .git $XDG_CONFIG_HOME | vo'
