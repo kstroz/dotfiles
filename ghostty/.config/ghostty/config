@@ -6,9 +6,10 @@
 theme = Gruvbox Dark
 
 # Fonts
-font-family = MesloLGS NF
+font-family = Iosevka Term
 font-size = 14
 font-thicken = false
+font-feature = -calt
 
 # Window
 window-padding-x = 8
