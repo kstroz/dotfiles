@@ -29,3 +29,5 @@ clipboard-read = ask
 ## Shell integration
 shell-integration = zsh
 shell-integration-features = no-cursor
+
+background-opacity = 0.95
