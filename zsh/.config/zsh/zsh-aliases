@@ -1,5 +1,6 @@
 #!/bin/sh
 
+alias c="clear"
 alias ls="ls --color=auto --group-directories-first"
 alias ll="ls -alFh"
 alias grep="grep --color=auto"
