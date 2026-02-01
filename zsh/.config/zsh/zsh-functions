@@ -7,6 +7,7 @@ function zsh_add_plugin() {
 
   if [[ ! -d "$PLUGIN_DIR" ]]; then
     git clone --depth=1 "https://github.com/$REPO.git" "$PLUGIN_DIR"
+    echo
   fi
 
   for FILE in \
