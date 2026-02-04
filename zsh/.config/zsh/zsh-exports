@@ -21,7 +21,7 @@ export PYENV_ROOT="$XDG_DATA_HOME/pyenv"
 export BAT_THEME="gruvbox-dark"
 
 # fzf
-source <(fzf --zsh)
+eval "$(fzf --zsh)"
 export FZF_DEFAULT_OPTS="\
   --style minimal \
   --layout=reverse \

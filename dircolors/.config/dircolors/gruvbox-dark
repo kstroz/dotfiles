@@ -1,0 +1,17 @@
+# Gruvbox Dark dircolors - minimal from Ghostty Dark theme
+
+COLOR tty
+
+TERM ghostty
+TERM tmux*
+TERM tmux-256color
+TERM screen*
+TERM screen-256color
+
+# Colours
+NORMAL 00
+RESET 0
+FILE 00
+DIR 01;34           # Directories: bright blue
+LINK 01;36          # Symlinks: bright cyan
+EXEC 01;32          # Executables: bright green

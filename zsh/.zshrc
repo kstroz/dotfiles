@@ -1,15 +1,15 @@
-#!/bin/sh
-
 # zmodload zsh/zprof
 
 zmodload zsh/complist
 autoload -U compinit && compinit
 autoload -U colors && colors
 
+eval $(dircolors $XDG_CONFIG_HOME/dircolors/gruvbox-dark)
+
 # Completion
 zstyle ':completion:*' menu select
 zstyle ':completion:*' special-dirs true # show . and .. in cmp menu
-zstyle ':completion:*' list-colors 'ma=38;5;3' 'di=38;5;4' # to better match gruvbox
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS} 'ma=38;5;3'
 
 # Main opts
 setopt append_history inc_append_history share_history
