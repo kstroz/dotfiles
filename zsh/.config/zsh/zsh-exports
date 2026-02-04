@@ -32,13 +32,16 @@ export FZF_DEFAULT_OPTS="\
   --color=fg+:#ebdbb2 \
   --color=bg+:#32302f \
   --color=info:#928374 \
+  --color=spinner:#b8bb26 \
   --color=hl:#fe8019 \
   --color=hl+:#fe8019 \
   --color=pointer:#fb4934 \
   --color=marker:#d3869b \
   --color=gutter:#a89984 \
-  --color=prompt:#b8bb26 \
-  --preview='bat --color=always {}'\
+  --color=prompt:#ebdbb2 \
+  --prompt='[$] ' \
+  --bind ctrl-b:preview-half-page-up,ctrl-f:preview-half-page-down \
+  --preview='bat --color=always {}' \
 "
 
 # fnm
