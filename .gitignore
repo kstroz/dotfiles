@@ -1,3 +1,7 @@
+# zsh
 **/zsh/plugins/
+.zcompdump
+
+# tmux
 **/tmux/plugins/
 **/tmux/sessions/
