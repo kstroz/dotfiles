@@ -1,3 +1,5 @@
+# Main zsh settings, env in .zprofile
+
 # zmodload zsh/zprof
 
 zmodload zsh/complist
@@ -27,9 +29,12 @@ HISTSIZE=1000000
 SAVEHIST=1000000
 HISTCONTROL=ignoreboth
 
-source "$XDG_CONFIG_HOME/zsh/zsh-exports"
 source "$XDG_CONFIG_HOME/zsh/zsh-aliases"
 source "$XDG_CONFIG_HOME/zsh/zsh-functions"
+
+# Shell integrations
+source <(fzf --zsh)
+eval "$(fnm env --use-on-cd)"
 
 # Plugins
 zsh_add_plugin romkatv/powerlevel10k
