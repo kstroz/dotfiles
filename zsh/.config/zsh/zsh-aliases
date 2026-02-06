@@ -9,7 +9,7 @@ alias df="df -h"
 # Vim
 alias v="nvim"
 alias vo="fzf --preview='bat --color=always {}' -m | xargs -r $EDITOR"
-alias voc="fd -HL '' -E .git --ignore-file $HOME/dotfiles/.gitignore $XDG_CONFIG_HOME | vo"
+alias voc="(fd -HL '' -E .git --ignore-file $HOME/dotfiles/.gitignore $XDG_CONFIG_HOME && echo $HOME/.zprofile) | vo"
 
 # Lazy
 alias lg="lazygit"
