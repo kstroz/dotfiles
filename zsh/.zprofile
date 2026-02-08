@@ -25,6 +25,7 @@ export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export HOMEBREW_BUNDLE_FILE="$XDG_CONFIG_HOME/brew/.Brewfile"
 export PYTHON_HISTORY="$XDG_CACHE_HOME/.python_history"
 export PYENV_ROOT="$XDG_DATA_HOME/pyenv"
+export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 
 # Other settings
 export BAT_THEME="gruvbox-dark"
@@ -51,3 +52,4 @@ export FZF_DEFAULT_OPTS="\
   --bind ctrl-b:preview-half-page-up,ctrl-f:preview-half-page-down \
   --preview='bat --color=always {}' \
 "
+export FZF_CTRL_R_OPTS="--no-preview"
