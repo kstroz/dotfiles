@@ -36,6 +36,12 @@ source "$XDG_CONFIG_HOME/zsh/zsh-functions"
 source <(fzf --zsh)
 eval "$(fnm env --use-on-cd)"
 
+# Use vim keys in tab completion menu
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'j' vi-down-line-or-history
+bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect 'l' vi-forward-char
+
 # Plugins
 zsh_add_plugin romkatv/powerlevel10k
 source "$XDG_CONFIG_HOME/zsh/.p10k.zsh"
