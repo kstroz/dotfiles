@@ -14,7 +14,8 @@ font-feature = -calt
 # Window
 window-padding-x = 8
 window-padding-y = 8
-window-decoration = none
+window-decoration = auto
+background-opacity = 0.95
 
 # Cursor
 cursor-style-blink = false
@@ -30,4 +31,6 @@ clipboard-read = ask
 shell-integration = zsh
 shell-integration-features = no-cursor
 
-background-opacity = 0.95
+# Close w/o confirmation
+quit-after-last-window-closed = true
+confirm-close-surface = false
