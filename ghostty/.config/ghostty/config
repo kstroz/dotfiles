@@ -34,3 +34,6 @@ shell-integration-features = no-cursor
 # Close w/o confirmation
 quit-after-last-window-closed = true
 confirm-close-surface = false
+
+# MacOS
+macos-option-as-alt = true
