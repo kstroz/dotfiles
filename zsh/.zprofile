@@ -16,8 +16,10 @@ export PATH="$PATH:$HOME/.local/bin"
 
 case "$(uname -s)" in
   Linux) eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)" ;;
-  Darwin) ;;
+  Darwin) eval "$(/opt/homebrew/bin/brew shellenv)" ;;
 esac
+
+export PATH="$HOMEBREW_PREFIX/opt/coreutils/libexec/gnubin:$PATH"
 
 # Cleanup
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
